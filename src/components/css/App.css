@@ -1,0 +1,16 @@
+#homeMain{
+    display: flex;
+    justify-content: center;
+}
+
+#mainCol{
+    width: 750px;
+}
+
+#welcome{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
