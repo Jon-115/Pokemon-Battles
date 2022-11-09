@@ -151,6 +151,133 @@ let deck = [
         ],
         "convertedRetreatCost": 2,
         "image": "https://images.pokemontcg.io/pgo/49.png" 
+    },
+    {
+        "id": "xy7-91",
+        "name": "Tyranitar-EX",
+        "supertype": "Pokémon",
+        "subtypes": [
+            "Basic",
+            "EX"
+        ],
+        "hp": "180",
+        "types": [
+            "Darkness"
+        ],
+        "evolvesTo": [
+            "M Tyranitar-EX"
+        ],
+        "rules": [
+            "Pokémon-EX rule: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."
+        ],
+        "attacks": [
+            {
+                "name": "Hammer In",
+                "cost": [
+                    "Darkness",
+                    "Colorless",
+                    "Colorless"
+                ],
+                "convertedEnergyCost": 3,
+                "damage": "60",
+                "text": ""
+            },
+            {
+                "name": "Break Ground",
+                "cost": [
+                    "Darkness",
+                    "Darkness",
+                    "Colorless",
+                    "Colorless"
+                ],
+                "convertedEnergyCost": 4,
+                "damage": "130",
+                "text": "This attack does 10 damage to each of your Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
+            }
+        ],
+        "weaknesses": [
+            {
+                "type": "Fighting",
+                "value": "×2"
+            }
+        ],
+        "resistances": [
+            {
+                "type": "Psychic",
+                "value": "-20"
+            }
+        ],
+        "retreatCost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+        ],
+        "convertedRetreatCost": 4,
+        "image": "https://images.pokemontcg.io/xy7/91.png",     
+    },
+    {
+        "id": "xyp-XY34",
+        "name": "Metagross-EX",
+        "supertype": "Pokémon",
+        "subtypes": [
+            "Basic",
+            "EX"
+        ],
+        "hp": "180",
+        "types": [
+            "Metal"
+        ],
+        "evolvesTo": [
+            "M Metagross-EX"
+        ],
+        "rules": [
+            "Pokémon-EX rule: When a Pokémon-EX has been Knocked Out, your opponent takes 2 Prize cards."
+        ],
+        "attacks": [
+            {
+                "name": "Magnetic Laser",
+                "cost": [
+                    "Metal",
+                    "Colorless"
+                ],
+                "convertedEnergyCost": 2,
+                "damage": "20",
+                "text": "You may move a Metal Energy from 1 of your Benched Pokémon to this Pokémon."
+            },
+            {
+                "name": "Squared Attack",
+                "cost": [
+                    "Metal",
+                    "Metal",
+                    "Colorless",
+                    "Colorless"
+                ],
+                "convertedEnergyCost": 4,
+                "damage": "50×",
+                "text": "Flip 4 coins. This attack does 50 damage times the number of heads."
+            }
+        ],
+        "weaknesses": [
+            {
+                "type": "Fire",
+                "value": "×2"
+            }
+        ],
+        "resistances": [
+            {
+                "type": "Psychic",
+                "value": "-20"
+            }
+        ],
+        "retreatCost": [
+            "Colorless",
+            "Colorless",
+            "Colorless",
+            "Colorless"
+        ],
+        "convertedRetreatCost": 4,
+        "image": "https://images.pokemontcg.io/xyp/XY34.png",     
     }
 ]
 

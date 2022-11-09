@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import {useSelector} from 'react-redux'
 import DisplayCard from './DisplayCard'
 import '../css/DisplayPlayer.css'
+
 // import { setTimeout } from "timers/promises";
 
 function DisplayPlayer({endGame}) {
@@ -26,13 +27,16 @@ function DisplayPlayer({endGame}) {
     const [cPokemon, setCPokemon] = useState(player2.deck.length)
     const [tPokemon, setTPokemon] = useState(player1.deck.length)
 
+
     function handleClick(move, costlist) {
   
+      let newCost = 0
 
       if (move === 'Pass'){
+        newCost = energyT + 1
         setEnergyC(energyC+1)
         setEnergyT(energyT+1)
-        setTimeout(computerTurn ,time);
+        setTimeout(() => computerTurn(newCost) ,time);
       }
       else{ 
         let cost = costlist.length
@@ -40,37 +44,37 @@ function DisplayPlayer({endGame}) {
         if (move.includes('+')){
           let damage = Number(move.replace('+',''))
           if(energyT >= cost){
-
-            setEnergyT(energyT - cost)
+            newCost = energyT - cost
+            setEnergyT(newCost)
             setHpC( hpC - damage)
             if (hpC - damage <= 0){
               nextPokemon()
             }
-            setTimeout(computerTurn ,time);
+            setTimeout(() => computerTurn(newCost) ,time);
           }
         }
         else if (move.includes('×')){
           let damage = Number(move.replace('×',''))
           if(energyT >= cost){
-
-            setEnergyT(energyT - cost)
+            newCost = energyT - cost
+            setEnergyT(newCost)
             setHpC( hpC - damage)
             if (hpC - damage <= 0){
               nextPokemon()
             }
-            setTimeout(computerTurn ,time);
+            setTimeout(() => computerTurn(newCost) ,time);
           }
         }
         else{
           let damage = Number(move)
           if(energyT >= cost){
-
-            setEnergyT(energyT - cost)
+            newCost = energyT - cost
+            setEnergyT(newCost)
             setHpC( hpC - damage)
             if (hpC - damage <= 0){
               nextPokemon()
             }
-            setTimeout(computerTurn ,time);
+            setTimeout(() => computerTurn(newCost) ,time);
           }
         }
 
@@ -101,14 +105,38 @@ function DisplayPlayer({endGame}) {
       }
     }
 
-    function computerTurn() {
-      let damage = 60
-      setHpT(hpT - damage)
-      if (hpT - damage <= 0){
+    function computerTurn(en) {
+      
+      let prob = Math.random()
+      if (prob > .8){
+        let damage = 70
+        setHpT(hpT - damage)
+        if (hpT - damage <= 0){
         nextPokemonT()
+        }
+        setEnergyC(energyC+1)
+        setEnergyT(en+1)
       }
-      setEnergyC(energyC+1)
-      setEnergyT(energyT+2)
+      else if (prob >.5){
+        let damage = 50
+        setHpT(hpT - damage)
+        if (hpT - damage <= 0){
+        nextPokemonT()
+        }
+        setEnergyC(energyC+1)
+        setEnergyT(en+1)
+      }
+      else{
+        let damage = 30
+        setHpT(hpT - damage)
+        if (hpT - damage <= 0){
+        nextPokemonT()
+        }
+        setEnergyC(energyC+1)
+        setEnergyT(en+1)
+      }
+      
+      
     }
 
 
