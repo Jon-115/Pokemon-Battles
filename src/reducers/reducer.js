@@ -23,7 +23,6 @@ const reducer = (state, action) => {
                
             }
         case "ADD_CARD":
-            console.log(action.card.id)
             return{
                 ...state,
                 selectedDeck: state.selectedDeck.concat(action.card)

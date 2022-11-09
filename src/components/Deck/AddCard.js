@@ -71,43 +71,46 @@ function AddCard() {
 
   return (
     <div>
-      <Form onSubmit={e => handleSubmit1(e)}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Add Pokemon</Form.Label>
-          <Form.Control type="text" placeholder="Enter Name" value={pokeName} onChange={e => setPokeName(e.target.value)} />
-          <Form.Text className="text-muted">
-            Add a new Pokemon to your team
-          </Form.Text>
-        </Form.Group>
+      <div>
+        <Form onSubmit={e => handleSubmit1(e)}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Add Pokemon</Form.Label>
+            <Form.Control type="text" placeholder="Enter Name" value={pokeName} onChange={e => setPokeName(e.target.value)} />
+            <Form.Text className="text-muted">
+              Add a new Pokemon to your team
+            </Form.Text>
+          </Form.Group>
 
-        <Form.Group className="mb-3">
-          <Form.Label>Select Type</Form.Label>
-          <Form.Select onChange={e => setType(e.target.value)} >
-            <option>None</option>
-            <option>Fire</option>
-            <option>Water</option>
-            <option>Grass</option>
-            <option>Dragon</option>
-            <option>Fairy</option>
-            <option>Darkness</option>
-            <option>Colorless</option>
-            <option>Fighting</option>
-            <option>Lightning</option>
-            <option>Metal</option>
-            <option>Physic</option>
-          </Form.Select>
-        </Form.Group>
-    
+          <Form.Group className="mb-3">
+            <Form.Label>Select Type</Form.Label>
+            <Form.Select onChange={e => setType(e.target.value)} >
+              <option>None</option>
+              <option>Fire</option>
+              <option>Water</option>
+              <option>Grass</option>
+              <option>Dragon</option>
+              <option>Fairy</option>
+              <option>Darkness</option>
+              <option>Colorless</option>
+              <option>Fighting</option>
+              <option>Lightning</option>
+              <option>Metal</option>
+              <option>Physic</option>
+            </Form.Select>
+          </Form.Group>
+      
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+
+      </div>
       <br /> 
 
       <div id='searchResults'>
         {searchResults.map(pokemon => {
-          return <SearchResults pokemonObj={pokemon} />
+          return <SearchResults key={pokemon.id} pokemonObj={pokemon} />
         })}
       </div>
 

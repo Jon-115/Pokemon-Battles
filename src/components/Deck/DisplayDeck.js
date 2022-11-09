@@ -17,7 +17,7 @@ function DisplayDeck() {
   return (
     <div id='theDeck'>
         {GlobalDeck.map(pokemonObj => {
-            return  <div id='card'>
+            return  <div key={pokemonObj.id} id='card'>
                     <img src={pokemonObj.image} alt='' width='150' height='225'></img>
                     <Button variant="outline-danger" onClick={() => handleClick(pokemonObj.id)}>X</Button>{' '}
                 </div>

@@ -22,7 +22,6 @@ function SearchResults({pokemonObj}) {
   return (
     <div id='card'>
         <img src={pokemonObj.image} alt='' width='150' height='225'></img>
-        
         <Button variant="outline-success" onClick={() => getCard(pokemonObj)}>+</Button>{' '}
     </div>
   )

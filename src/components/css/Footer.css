@@ -5,4 +5,10 @@
     height: 5rem;            /* Footer height */
     background-color: #212529;
     color: white;
+    display: flex;
+    justify-content: center;
   }
+
+#footBox{
+  margin-top: 20px;
+}
