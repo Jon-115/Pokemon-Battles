@@ -1,3 +1,7 @@
 #battleMain{
     height: 100vh;
 }
+
+#battleForm{
+    margin: 100px;
+}

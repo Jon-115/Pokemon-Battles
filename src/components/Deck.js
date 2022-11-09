@@ -14,10 +14,11 @@ function Deck() {
       <DisplayDeck />
       <br />
 
-      <SelectDeck />
-      <br />
-
-      <AddCard />
+      <div id='deckFrom'>
+        <SelectDeck />
+        <br />
+        <AddCard />
+      </div>
       <br />
       
       

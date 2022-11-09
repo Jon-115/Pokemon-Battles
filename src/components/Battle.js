@@ -55,7 +55,7 @@ function Battle() {
         {startGame ?  
         <DisplayPlayer endGame={() => setStartGame()} />
          : 
-        <div>
+        <div id='battleForm'>
           <Form onSubmit={(e) => handleSubmit(e)}>
             <Form.Group className="mb-3">
               <Form.Label>Select Type</Form.Label>
