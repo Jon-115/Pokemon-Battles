@@ -40,7 +40,7 @@ export default function PaymentForm() {
     if(!error) {
         try {
             const {id} = paymentMethod
-            const response = await axios.post("http://localhost:4000/payment", {
+            const response = await axios.post("https://git.heroku.com/gentle-lake-58313.git/payment", {
                 amount: 500,
                 id
             })
